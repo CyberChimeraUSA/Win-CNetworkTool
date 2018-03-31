@@ -1,9 +1,9 @@
 #pragma once
 
-#include <windows.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
+#ifndef CONTROLLER__H_
+#define CONTROLLER__H_
+
+void dump(const unsigned char *data_buffer, const unsigned int length);
 
 class generic_network {
   public:
@@ -11,3 +11,9 @@ class generic_network {
 	  int generic_client(void);
 	  int dns_lookup(void);
 };
+class pcap_network {
+public:
+	int list_device(void);
+};
+
+#endif

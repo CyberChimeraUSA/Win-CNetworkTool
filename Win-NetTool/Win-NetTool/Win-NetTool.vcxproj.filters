@@ -38,5 +38,11 @@
     <ClCompile Include="DNS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pcapController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

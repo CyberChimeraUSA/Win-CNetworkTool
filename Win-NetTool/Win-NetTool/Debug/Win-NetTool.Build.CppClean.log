@@ -2,9 +2,11 @@ c:\users\isaac\source\repos\win-nettool\win-nettool\debug\win-nettool.pch
 c:\users\isaac\source\repos\win-nettool\win-nettool\debug\vc141.pdb
 c:\users\isaac\source\repos\win-nettool\win-nettool\debug\vc141.idb
 c:\users\isaac\source\repos\win-nettool\win-nettool\debug\stdafx.obj
-c:\users\isaac\source\repos\win-nettool\win-nettool\debug\genericserver.obj
-c:\users\isaac\source\repos\win-nettool\win-nettool\debug\win-nettool.obj
 c:\users\isaac\source\repos\win-nettool\win-nettool\debug\dns.obj
+c:\users\isaac\source\repos\win-nettool\win-nettool\debug\generalfunctions.obj
+c:\users\isaac\source\repos\win-nettool\win-nettool\debug\genericserver.obj
+c:\users\isaac\source\repos\win-nettool\win-nettool\debug\pcapcontroller.obj
+c:\users\isaac\source\repos\win-nettool\win-nettool\debug\win-nettool.obj
 c:\users\isaac\source\repos\win-nettool\debug\win-nettool.exe
 c:\users\isaac\source\repos\win-nettool\debug\win-nettool.ilk
 c:\users\isaac\source\repos\win-nettool\debug\win-nettool.pdb

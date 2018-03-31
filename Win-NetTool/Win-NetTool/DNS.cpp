@@ -19,7 +19,6 @@
 // #pragma comment (lib, "Mswsock.lib")
 
 #define DEFAULT_BUFLEN 512
-#define DEFAULT_PORT "27015"
 
 using namespace std;
 int generic_network::dns_lookup(void)
@@ -27,26 +26,14 @@ int generic_network::dns_lookup(void)
 	WSADATA wsaData;
 	int iResult;
 
-	//Create Sockets
-	SOCKET ListenSocket = INVALID_SOCKET;
-	SOCKET ClientSocket = INVALID_SOCKET;
-
 
 	struct addrinfo *result = NULL;
 	struct addrinfo hints;
 	struct addrinfo *p;
 	struct sockaddr_in *ip_access;
 
-	char *hostname;
 	char url_input[DEFAULT_BUFLEN];
 	
-	int iSendResult;
-	char recvbuf[DEFAULT_BUFLEN];
-	int recvbuflen = DEFAULT_BUFLEN;
-
-
-
-
 
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -66,7 +53,7 @@ int generic_network::dns_lookup(void)
 	cout << url_input << endl;
 
 	// Resolve the server address and port
-	iResult = getaddrinfo("www.google.com", "80", &hints, &result);
+	iResult = getaddrinfo(url_input, "80", &hints, &result);
 	if (iResult != 0) {
 		printf("getaddrinfo failed with error: %d\n", iResult);
 		WSACleanup();
@@ -86,31 +73,8 @@ int generic_network::dns_lookup(void)
 	freeaddrinfo(result);
 
 	printf("\n");
-
+	return 0;
 }
 
 
 
-#if 0
-
-INPUT_RECORD record;
-DWORD numRead;
-if (!ReadConsoleInput(GetStdHandle(STD_INPUT_HANDLE), &record, 1, &numRead))
-
-
-BOOL WINAPI ReadConsole(
-	_In_     HANDLE  hConsoleInput,
-	_Out_    LPVOID  lpBuffer,
-	_In_     DWORD   nNumberOfCharsToRead,
-	_Out_    LPDWORD lpNumberOfCharsRead,
-	_In_opt_ LPVOID  pInputControl
-);
-
-HANDLE input_handle;
-LPVOID output_buffer;
-DWORD max_char;
-LPDWORD char_read;
-
-
-
-#endif
